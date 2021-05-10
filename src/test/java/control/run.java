@@ -16,14 +16,15 @@ import modelo.*;
 public class run {
     
     public static void main(String args[]) throws ParseException{
+        
         MagnamentFicha mag=new MagnamentFicha();
-        MagnamentAutor maA=new MagnamentAutor();
-        Yacimiento y=new Yacimiento(12,"soga",122.1,233.3);
+        
+        Yacimiento y =new Yacimiento(12,"soga",122.1,233.3);
         DateFormat format=new SimpleDateFormat("DD/MM/YYYY");
         Date fecha=format.parse("12/03/2016");
         
         
-        maA.añadirAutor(10,"pepe","encargado");
+        mag.getMagAutor().añadirAutor(10,"pepe","encargado");
         
         
         System.out.println(mag.añadirFicha(1, "aw", "a", "a", 1, 1, "yaci", 10, 10, fecha, 1, 10));

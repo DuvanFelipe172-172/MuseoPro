@@ -24,6 +24,7 @@ public class MagnamentFicha {
 
 
     public MagnamentFicha() {
+        MagAutor = new MagnamentAutor();
         fichas=new ArrayList<>(); 
 
     }
@@ -119,6 +120,12 @@ public class MagnamentFicha {
                 fichas.get(this.contador(id)).setEdadEjemplar(Integer.parseInt(valor));
                 
                 break;
+            case("autor"):
+                
+                fichas.get(this.contador(id)).setAutor(MagAutor.buscarAutor(id));
+                
+                break;
+                
             } 
             return true;
         }

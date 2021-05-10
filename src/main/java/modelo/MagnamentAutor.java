@@ -16,12 +16,13 @@ public class MagnamentAutor {
     private ArrayList<Autor> autores;
 
     public MagnamentAutor() {
-                autores=new ArrayList<>();
+            autores=new ArrayList<>();
     }
     
     
     
-    public boolean añadirAutor(int id_autor, String nombre, String cargo){          
+    public boolean añadirAutor(int id_autor, String nombre, String cargo){  
+        
         if (this.buscarAutor(id_autor) != null){
             return false;
         }else{
@@ -54,16 +55,6 @@ public class MagnamentAutor {
     } 
      
      
-     public ArrayList<Autor> mostrarAutor(String nombre){
-         ArrayList<Autor> aux=new ArrayList<>();
-         
-         for (Autor autor : autores) {
-             if(autor.getNombre().equalsIgnoreCase(nombre)){
-                 aux.add(autor);
-             }
-         }
-         return aux;
-     }
      
      
      public boolean eliminarAutor(int id){
